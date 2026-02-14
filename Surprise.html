@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>My Final Words ❤️</title>
+<style>
+body{
+margin:0;
+background:black;
+overflow:hidden;
+color:white;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+font-family:Arial;
+text-align:center;
+}
+h1{
+color:#ff4d6d;
+}
+.heart{
+position:absolute;
+color:red;
+font-size:20px;
+animation:fall 5s linear infinite;
+}
+@keyframes fall{
+0%{transform:translateY(-100px);}
+100%{transform:translateY(100vh);}
+}
+</style>
+</head>
+<body>
+
+<div>
+<h1>Manali ❤️</h1>
+<p>
+I Love You So Much 🌹<br>
+Aur hamesha karta rahunga 💕
+</p>
+</div>
+
+<script>
+function createHeart(){
+const heart=document.createElement("div");
+heart.classList.add("heart");
+heart.innerHTML="❤️";
+heart.style.left=Math.random()*100+"vw";
+heart.style.animationDuration=Math.random()*3+2+"s";
+document.body.appendChild(heart);
+setTimeout(()=>{heart.remove();},5000);
+}
+setInterval(createHeart,300);
+</script>
+
+</body>
+</html>
